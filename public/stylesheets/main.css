@@ -1,0 +1,207 @@
+@media (max-width: 414px){
+	.jumbotron .container{	
+      margin-top:60px;
+	}
+	
+	#about .container img{
+	  width: 112%;
+	  height: auto;
+	}
+
+}
+
+.jumbotron {
+  background: #aeeaae;
+  color: white;
+  padding-bottom: 80px; }
+  .jumbotron .btn-primary, #contact .btn-primary, #company-login .btn-primary, #company-signup .btn-primary, 
+  #volunteer-login .btn-primary, #volunteer-signup .btn-primary{
+    background: #ff80b2;
+    border: none;
+    margin: 10px; 10px 0 10px; }
+    .jumbotron .btn-primary:hover, #contact .btn-primary:hover, #company-login .btn-primary:hover, #company-signup .btn-primary:hover, 
+    #volunteer-login .btn-primary:hover, #volunteer-signup .btn-primary:hover {
+      background: #ff6666; }
+      border: none;
+  .jumbotron p {
+    color: #333333;
+    max-width: 75%;
+    margin: 1em auto 2em; }
+  .navbar + .jumbotron {
+    margin-top: -20px;
+    margin-bottom: 0; }
+    .jumbotron .foodSNAP-logo img {
+      margin-top: 40px;
+      width: 25%;
+      height: auto; }
+
+.navbar-custom{
+	background-color: #333333;
+	border: none;
+	padding: 5px 10px;
+}
+
+.navbar-default .navbar-nav>li .active{
+	color: #ff80b2;
+}
+
+.navbar-default .navbar-nav>li>a{
+	font-size: 2rem;
+	color:#ffffff;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+	color: #ff80b2;
+	background-color: transparent;
+	outline: none;
+}
+
+.jumbotron h1{
+	font-family: 'Maven Pro', sans-serif;
+}
+
+section {
+	padding: 20px;
+	text-align: center;
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#about h1, #contact h1, #company-login h1, #company-signup h1, #volunteer-login h1,
+ #volunteer-signup h1, #calendar h1{
+	font-family: 'Maven Pro', sans-serif;
+	color: #ff80b2;
+}
+
+#about .container .col-sm-5, #about .container .col-md-6{
+	margin-top: 20px;
+	float:right;
+	font-family: 'Maven Pro', sans-serif;
+	padding: 35px;
+}
+
+#about .container img{
+	margin: -13% -20px 50px 15px;
+}
+
+#calendar-home, .why-sign-up{
+	background-color: #ff80b2;
+}
+
+#calendar-home h1, .why-sign-up h1, #footer h5{
+	font-family: 'Maven Pro', sans-serif;
+	color: #ffffff;
+}
+
+
+#calendar-home .form-group, #contact .form-group, #company-login .form-group, #company-signup .form-group,
+#volunteer-login .form-group, #volunteer-signup .form-group{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 1.75rem;
+	color: #000000;
+	text-align: center;
+}
+
+#calendar-home .form-group{
+	color: #ffffff;
+}
+
+
+#company-signup label, #volunteer-signup label{
+	margin-top: 10px;
+	width: 50%;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+
+textarea, #contact .form-control:focus, #calendar-home .form-control:focus, #company-login .form-control:focus, #company-signup .form-control:focus,
+#volunteer-login .form-control:focus, #volunteer-signup .form-control:focus{
+	border-color: #cccccc;
+	outline: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+textarea{
+	border-radius: 5px;
+}
+
+#calendar-home .btn-primary {
+    background-color: #ffffff;
+    color: #ff80b2;
+    font-family: 'Maven Pro', sans-serif;
+    border: none;
+    margin: -5px; 10px 0px 10px; 
+    border: none;
+}
+
+#calendar-home .btn-primary:hover {
+    background-color: #ff6666;
+    color: #ffffff; 
+    border: none;
+}
+
+#footer{
+	background-color: #000000;
+	position: relative;
+}
+
+#footer a{
+	color: #ff80b2;
+	text-decoration: none;
+}
+
+#footer a:hover{
+	color: #aeeaae;
+}
+
+
+
+#calendar{
+	padding-top:100px;
+}
+
+#company-signup a, #volunteer-signup a{
+
+
+	outline: none;
+	text-decoration: none;
+	color:#ffffff;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+
+#company-login a, #volunteer-login a{
+	outline: none;
+	text-decoration: none;
+	color: #ff80b2;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+#company-login a:hover, #volunteer-login a:hover{
+	color: #aeeaae;
+}
+
+.why-sign-up .col-xs-12, .why-sign-up .col-md-4{
+	margin: 30px auto;
+	color: #ffffff;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+#calendar .table {
+   text-align: center;  
+   font-family: 'Maven Pro', sans-serif; 
+}
+
+#calendar .table th{
+	text-align: center;
+	padding: 10px 0;
+	color: #ff80b2;
+}
