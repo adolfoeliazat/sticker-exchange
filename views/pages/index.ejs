@@ -5,51 +5,9 @@
 </head>
 
 <body>
-
-	<script>
-		$(document).ready(function(){
-			var sections = $('section')
-			var nav = $('nav')
-  			var nav_height = nav.outerHeight();
-
-			$(window).on('scroll', function () {
-  			var cur_pos = $(this).scrollTop();
-  
-			});
-
-			nav.find('a').on('click', function () {
-  			var $el = $(this)
-    		var id = $el.attr('href');
-  
-  			$('html, body').animate({
-   			 scrollTop: $(id).offset().top - nav_height
-  			}, 500);
-  			
-  			return false;
-  			
-  			});
-  			
-  		});
-	</script>
-
   <% include ../partials/nav.ejs %>
-	<div id = "header">
-	  <div class="jumbotron text-center">
-  		<div class="container">
-    		<a href="#header" class="foodSNAP-logo">
-      		  <img src="/foodSNAP-logo.png">
-    		</a>
-    		<h1>food<span style="color:#ff80b2;">SNAP</span></h1>
-   			<a type="button" class="btn btn-lg btn-primary" href="company-login">For Companies</a>
-    		<a type="button" class="btn btn-lg btn-primary" href="volunteer-login">For Volunteers</a>
-  		 </div>
-	  </div>
-	</section>
-
-
-<% include ../pages/about.ejs %>
-<% include ../pages/calendar-home.ejs %>
-<% include ../pages/contact.ejs %>
+	<div id="header">
+	</div>
 </body>
-<% include ../partials/footer.ejs %>
+
 </html>
