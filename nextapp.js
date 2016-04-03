@@ -34,15 +34,15 @@ var user1 = new User({
 		name: 'poorva',
 		email: 'p.s@gmail.com',
 		password: '*******',
-		sticker: ['github', 'pearlhacks', 'mlh']
+		sticker: [{name:'github'}, {name:'pearlhacks'}, {name:'mlh'}]
 });
 
 var user4 = new User({
-		username: 'Goorva-s',
+		username: 'G-S',
 		name: 'poorva',
 		email: 'p.s@gmail.com',
-		password: '****',
-		sticker: ['github', 'pearlhacks', 'mlh']
+		password: '********',
+		sticker: [{name: 'pearlhacks'}, {name:'mlh'}]
 });
 
 var user2 = new User({
@@ -50,7 +50,7 @@ var user2 = new User({
 		name: 'connie',
 		email: 'c.s@gmail.com',
 		password: '*****',
-		sticker: ['github', 'wordpress', 'redhat']
+		sticker: [{name:'github'}, {name:'wordpress'}, {name:'redhat'}]
 });
 
 var user3 = new User({
@@ -58,7 +58,7 @@ var user3 = new User({
 		name: 'helen',
 		email: 'h.s@gmail.com',
 		password: '*******',
-		sticker: ['aws', 'redhat', 'mlh', 'pusheen']
+		sticker: [{name:'aws'}, {name:'redhat'}, {name:'mlh'}, {name:'pusheen'}]
 });
 
 user1.save(function(err, user) {
@@ -121,7 +121,7 @@ app.get('/search/:sticker', function(req, res){
 		res.json({message: 'invalid user : ' + req.params.username});
 		//res.render('pages/login');
 	}
-	User.find({ sticker:  { $elemMatch: {req.params.sticker } }, function(err, user) {
+	User.find({ sticker : {name: req.params.sticker} }, function(err, user) {
 		  if (err) return console.error(err);
 		  console.dir(user);
 		  if(user == null){
