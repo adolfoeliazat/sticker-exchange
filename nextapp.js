@@ -33,7 +33,7 @@ var user1 = new User({
 		username: 'Poorva-s',
 		name: 'poorva',
 		email: 'p.s@gmail.com',
-		password: 'password',
+		password: '*******',
 		sticker: ['github', 'pearlhacks', 'mlh']
 });
 
@@ -41,7 +41,7 @@ var user4 = new User({
 		username: 'Goorva-s',
 		name: 'poorva',
 		email: 'p.s@gmail.com',
-		password: 'password',
+		password: '****',
 		sticker: ['github', 'pearlhacks', 'mlh']
 });
 
@@ -49,7 +49,7 @@ var user2 = new User({
 		username: 'Connie-s',
 		name: 'connie',
 		email: 'c.s@gmail.com',
-		password: 'password',
+		password: '*****',
 		sticker: ['github', 'wordpress', 'redhat']
 });
 
@@ -57,7 +57,7 @@ var user3 = new User({
 		username: 'Helen-s',
 		name: 'helen',
 		email: 'h.s@gmail.com',
-		password: 'password',
+		password: '*******',
 		sticker: ['aws', 'redhat', 'mlh', 'pusheen']
 });
 
@@ -81,7 +81,7 @@ user4.save(function(err, user) {
   //console.dir(user);
 });
 
-app.post('/signup', function(req, res){
+/*app.post('/signup', function(req, res){
 	var user = new User({
 		username: req.params.username,
 		name: req.params.name,
@@ -97,7 +97,7 @@ app.post('/signup', function(req, res){
   		console.dir(user);
 	});
 	req.session.user = req.params.username;
-});
+});*/
 
 
 User.remove(function(err, user){
@@ -112,6 +112,8 @@ app.get('/all', function(req, res){
 	});
 });
 
+
+//===========************* TO FIX ***********================
 app.get('/search/:sticker', function(req, res){
 	var username = req.session.user;
 
@@ -119,7 +121,7 @@ app.get('/search/:sticker', function(req, res){
 		res.json({message: 'invalid user : ' + req.params.username});
 		//res.render('pages/login');
 	}
-	User.find({ sticker:  { $in : req.params.sticker } }, function(err, user) {
+	User.find({ sticker:  { $elemMatch: {req.params.sticker } }, function(err, user) {
 		  if (err) return console.error(err);
 		  console.dir(user);
 		  if(user == null){
@@ -138,6 +140,24 @@ app.get('/search_name/:name', function(req, res){
 		//res.render('pages/login');
 	}
 	User.find({name: req.params.name}, function(err, users) {
+		  if (err) return console.error(err);
+		  console.dir(users);
+		  if(users == null){
+		  	return res.json(users);
+		  	//go to login page
+		  }
+			res.json(users);
+	});
+});
+
+app.get('/search_username/:username', function(req, res){
+	var username = req.session.user;
+
+	if(!username) {
+		res.json({message: 'invalid user : ' + req.params.username});
+		//res.render('pages/login');
+	}
+	User.find({username: req.params.username}, function(err, users) {
 		  if (err) return console.error(err);
 		  console.dir(users);
 		  if(users == null){
