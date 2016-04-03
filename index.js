@@ -1,16 +1,12 @@
-// server.js
-// load the things we need
 var path = require('path')
 var express = require('express');
 var app = express();
+app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 8080));
+app.use(express.static(__dirname + '/'));
 
-
-app.use(express.static(__dirname + 'public'));
-
-// set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// index page 
 app.get('/', function(req, res) {
     res.render('pages/index');
 });
