@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <section id="dashboard">
+  	<% include ../partials/nav-dash.ejs %>
+  	
+		<div id="dashboard-landing">
+			<h1>Welcome, username</h1>
+		</div>
+		
+		<div id="trades">
+			<h1>Current Trade Offers</h1>
+			<br>
+			<br>
+			<br>
+			<div class="container">
+			<div class="col-md-4">
+				<img src="../public/images/propic-default.png"/>
+				<br>
+				<br>
+				<p><strong>User:</strong> Poorva-s </p>
+				<p><strong>Offer: </strong>PearlHacks Spring 2016 (Purple) for HackRU Fall 2015 </p>
+			</div>
+			
+			<div class="col-md-4">
+				<img src="../public/images/propic-default.png"/>
+				<br>
+				<br>
+				<p><strong>User:</strong> Goorva-s</p>
+				<p><strong>Offer: </strong>HackHERS Spring 2016 (Dino) for HackBU Spring 2016 </p>
+			</div>
+			
+			<div class="col-md-4">
+				<img src="../public/images/propic-default.png"/>
+				<br>
+				<br>
+				<p><strong>User:</strong> Helen-s</p>
+				<p><strong>Offer:  </strong>Octocat (Portal) for Octocat (Ninja)</p>
+			</div>
+			
+				
+					<button class="button"><a href="search">Search Offers</a></button>
+				</div>
+			
+		</div>
+		
+		<div id="collection">
+			<h1>Your Collection</h1>
+			<br>
+			<br>
+			<br>
+			<div class="container">
+			
+				<div class="col-md-4">
+					<img src="../public/images/vintage-pearlhacks.png" style="height: 200px; width: auto;"/>
+					<br>
+					<br>
+					<p><strong>Sticker:</strong> PearlHacks 2015 </p>
+				</div>
+				
+				<div class="col-md-4">
+					<img src="../public/images/pearlhacks-pusheen-art.png" style="height: 200px; width: auto;"/>
+					<br>
+					<br>
+					<p><strong>Sticker:</strong> PearlHacks 2015 (Pusheen - Art)</p>
+				</div>
+				
+				<div class="col-md-4">
+					<img src="../public/images/pearlhacks-2016-pink.png" style="height: 200px; width: auto;"/>
+					<br>
+					<br>
+					<p><strong>Sticker:</strong> PearlHacks 2016 (Logo - Pink) </p>
+				</div>
+				
+				<button class="button"><a href="">Edit</a></button>
+			</div>
+		</div>
+	
+	</section>
+</body>
+<footer>
+	<% include ../partials/footer.ejs %>
+</footer>
+
+</html>
