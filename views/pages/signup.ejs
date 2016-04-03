@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  	<% include ../partials/nav.ejs %>
+	<section id="signup">
+		<div class="form">
+			<div class="container">
+				<img src="../public/images/logo.png" style="margin-top: 50px; height:300px; width: auto;" />
+				<h1 style="	font-family: 'VT323', san-serif; color: #f9f9f9; font-size: 10rem; position: relative; top: -2rem;">Sign Up</h1>
+					<form style="margin-top: 20px;" name="signup">
+		  	  			
+		  	  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserFirstName"></label>
+    			  			<input type="text" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserFirstName" name="firstname" placeholder="First Name" required>
+  			  			</fieldset>
+  			  		
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserLastName"></label>
+    			  			<input type="text" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserLastName" name="lastname" placeholder="Last Name" required>
+  			  			</fieldset>
+  			  		
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserEmail"></label>
+    			  			<input type="text" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserEmail" name="email" placeholder="Email" required>
+  			  			</fieldset>
+  			  			
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserUsername"></label>
+    			  			<input type="text" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserUsername" name="username" placeholder="Last Name" required>
+  			  			</fieldset>
+  			  			
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserPassword"></label>
+    			  			<input type="password" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserPassword" name="password" placeholder="Password" required>
+  			  			</fieldset>
+  			  			
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formUserPasswordRepeat"></label>
+    			  			<input type="password" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formUserPasswordRepeat" name="retypepassword" placeholder="Retype Password" required>
+  			  			</fieldset>
+  			  		
+								
+							
+							<div class="button" style="margin: 30px;" onclick="validateForm()"><a href="login">Start Trading!</a></div>
+  			 		</form>
+				</div>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</section>
+	
+</body>
+<footer>
+	<% include ../partials/footer.ejs %>
+</footer>
+
+</html>

@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/'));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/signup');
 });
 
 app.listen(8080);
