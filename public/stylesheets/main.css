@@ -5,7 +5,8 @@
 }
 
 .navbar-default{
-	background-color: transparent;
+	background-color: #3d69c9;
+	opacity: 0.9;
 	border-color: transparent;
 }
 
@@ -29,6 +30,14 @@
 }
 
 #landing > h1 {
+	font-family: 'VT323', san-serif;
+	color: #f9f9f9;
+	font-size: 10rem;
+	position: relative;
+	top: 10rem;
+}
+
+.form > h1{
 	font-family: 'VT323', san-serif;
 	color: #f9f9f9;
 	font-size: 10rem;
@@ -74,6 +83,16 @@
 	display: inline-block;
 	margin: 30px 20px 0 20px;
 
+}
+
+.button: active{
+	background-color: rgb(61, 105, 201);
+	box-shadow: 0 3px 0 #1b3162;
+}
+
+.button > a{
+	text-decoration: none;
+	
 }
 
 #left{
@@ -146,6 +165,13 @@
 	color: #f9f9f9;
 }
 
+
+
+.form{
+	background-color: #3dc99d;
+	text-align: center;
+	min-height: 650px;
+}
 
 #footer{
 	background-color: #3d69c9;

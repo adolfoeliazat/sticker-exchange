@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $(".navbar-default").hide();
       $(window).scroll(function() { 

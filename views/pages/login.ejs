@@ -6,12 +6,32 @@
 
 <body>
   	<% include ../partials/nav.ejs %>
-	<div class="form">
-		<div class="container">
-	
+	<section id="login">
+		<div class="form">
+			<div class="container">
+				<img src="../public/images/logo.png" style="margin-top: 50px; height:300px; width: auto;" />
+				<h1 style="	font-family: 'VT323', san-serif; color: #f9f9f9; font-size: 10rem; position: relative; top: -2rem;">Login</h1>
+					<form style="margin-top: 20px;">
+		  	  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formCompanyInput"></label>
+    			  			<input type="text" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formCompanyInput" placeholder="Username">
+  			  			</fieldset>
+  			  		
+  			  			<fieldset class="form-group" style="margin-bottom: 0">
+		  					<label for="formCompanyPasswordInput"></label>
+    			  			<input type="password" class="form-control" style="width: 50%; margin: 0 auto; margin-top:10px;" id="formCompanyPasswordInput" placeholder="Password">
+  			  			</fieldset>
+							<div class="button" style="margin: 30px;"><a href="login">Login</a></div>
+  			 		</form>
+				</div>
+			<br>
+			<a href="" style="text-decoration: none;">Sign up for StickerShare</a>
+			<br>
+			<br>
+			<br>
 		</div>
-	</div>
-		
+	</section>
+	
 </body>
 <footer>
 	<% include ../partials/footer.ejs %>
