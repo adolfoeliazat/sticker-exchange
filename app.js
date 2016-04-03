@@ -41,13 +41,18 @@ router.use(function(req, res, next) {
 });
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+app.get('/', function(req, res) {
+	req.session.user = null;
+	res.render('pages/login'); //TODO
+});
+
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
 });
 
 // on routes that end in /user
 // ----------------------------------------------------
-router.route('/user')
+router.route('/user') //DEBUGGING FUNCTIONS
     .get(function(req, res) {
         User.find(function(err, users) {
             if (err)
@@ -57,7 +62,7 @@ router.route('/user')
         });
     })
 
-    .delete(function(req, res) {
+    .delete(function(req, res) { //DEBUGGING FUNCTIONS
         User.remove(function(err, bear) {
             if (err)
                 res.send(err);
@@ -76,16 +81,18 @@ router.route('/user/signup')
         User.find({'username': req.param.username}, function(err, user){
         	if (err)
                 res.send(err);
+
             if(user != null)
             	res.json({ message: 'Username taken'});
            	else
-        	user.save(function(err) {
-            if (err)
-                res.send(err);
+        		user.save(function(err) {
+            	if (err)
+                	res.send(err);
 
-            res.json({ message: 'User created!' });
-            res.render('pages/home');
-        });
+                req.session.user = req.params.username;
+            	res.json({ message: 'User created!' });
+            	res.render('pages/home'); //TODO
+        		});
 		});
     });
 
@@ -99,15 +106,23 @@ router.route('/user/login')
         User.find({'username': req.param.username}, function(err, user){
         	if (err)
                 res.send(err);
+
             if(user == null)
             	res.json({ message: 'Username not found'});
             	res.render('pages/login'); //TODO
+            else
+            	req.session.user = req.params.username;
         });
     });
 
 router.route('/user/:username')
 
     .get(function(req, res) {
+    	var username = req.session.user;
+
+		if(!username) {
+			response.render('pages/login'); //TODO
+		}
         User.find({'username': req.param.username}, function(err, user) {
             if (err)
                 res.send(err);
@@ -116,17 +131,28 @@ router.route('/user/:username')
     })
 
     .delete(function(req, res) {
+    	var username = req.session.user;
+
+		if(!username) {
+			response.render('pages/login'); //TODO
+		}    	
         User.remove({'username': req.param.username}, function(err, user) {
             if (err)
                 res.send(err);
 
+            req.session.user = null;
+			res.render('pages/login'); //TODO
             res.json({ message: 'Successfully deleted' });
         });
     });
 
 router.route('/user/:sticker')
-
+	
     .get(function(req, res) {
+    	var username = req.session.user;
+
+		if(!username) {
+			response.render('pages/login'); //TODO    	
         User.find({'sticker': { $in : req.param.sticker }}, function(err, user) {
             if (err)
                 res.send(err);
