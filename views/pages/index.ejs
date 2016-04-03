@@ -5,9 +5,22 @@
 </head>
 
 <body>
-  <% include ../partials/nav.ejs %>
-	<div id="header">
-	</div>
+  <section id="home">
+  	<% include ../partials/nav.ejs %>
+	
+		<div id="landing">
+			<img src="../public/images/logo.png" />
+			<h1>StickerShare</h1>
+			<h2>Trade stickers with hackers around the world</h2>
+		</div>
+	
+		<% include ../pages/landing-page-elements/intro.ejs %>
+		<% include ../pages/landing-page-elements/about.ejs %>
+		<% include ../pages/landing-page-elements/login-signup.ejs %>
+	</section>
 </body>
+<footer>
+	<% include ../partials/footer.ejs %>
+</footer>
 
 </html>
